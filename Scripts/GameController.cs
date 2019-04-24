@@ -66,10 +66,6 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        if (starSheild.activeInHierarchy)
-        {
-            StartCoroutine(PowerDecline());
-        }
         if (restart)
         {
             if (Input.GetKey(KeyCode.Space))
@@ -93,6 +89,10 @@ public class GameController : MonoBehaviour
         if (Input.GetKey("escape"))
         {
             Application.Quit();
+        }
+        if (starSheild.activeInHierarchy)
+        {
+            StartCoroutine(PowerDecline());
         }
     }
 
